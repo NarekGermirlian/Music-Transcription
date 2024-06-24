@@ -131,12 +131,13 @@ def getNotesFromMeans(means: np.ndarray) -> np.ndarray:
 
 recording_dir = record()
 freqs = getTimeFreqConf(recording=recording_dir, minConfidence=0.85, step=100)
-meansFreqs = getMeanFreqs(freqs)
-filteredFreqs = filterFreqs(meansFreqs)
-notes = getNotesFromMeans(filteredFreqs)
+if len(freqs) != 0:
+    meansFreqs = getMeanFreqs(freqs)
+    filteredFreqs = filterFreqs(meansFreqs)
+    notes = getNotesFromMeans(filteredFreqs)
 
-# Print out the notes
-if len(notes)!=0:
+    # Print out the notes
     print([note[2] for note in notes])
+    
 else:
     print("No notes detected.")

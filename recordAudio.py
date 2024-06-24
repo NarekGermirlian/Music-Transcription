@@ -4,7 +4,9 @@ import wave
 
 def getRecordingNum() -> int:
     path = "Recordings\\"
-
+    
+    if not os.path.exists(path):
+        os.makedirs(path)
     recordings = os.listdir(path)
     
     lastRecNum = 0
