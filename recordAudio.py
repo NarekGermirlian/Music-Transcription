@@ -3,7 +3,7 @@ import pyaudio
 import wave
 
 def getRecordingNum() -> int:
-    path = "Recordings\\"
+    path = "Recordings"
     
     if not os.path.exists(path):
         os.makedirs(path)
@@ -38,7 +38,7 @@ def record():
         print("Recording started. Press CTRL+C to stop.")
         while True:
             # Record 1024 frames at a time
-            data = stream.read(1024)
+            data = stream.read(1024, exception_on_overflow=False)
             frames.append(data)
     except KeyboardInterrupt:
         pass

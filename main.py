@@ -12,7 +12,7 @@ logging.getLogger("tensorflow").setLevel(logging.FATAL)
 CHANGE_CONSTANT = (2 ** (1/12)) - 1  #Approximately 0.0595
 MIN_CHANGE_FREQ = 0.05 #Adjusted for human error in singing
 
-def getTimeFreqConf(recording: str, minConfidence: float=0.6, step: int=100) -> np.ndarray[any]:
+def getTimeFreqConf(recording: str, minConfidence: float=0.6, step: int=100) -> np.ndarray:
     """
     Get a numpy 2D Array with corresopnding Time, Frequency, and Confidence columns
 
