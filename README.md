@@ -4,13 +4,6 @@ This program is a tool that provides a transcription of notes given an audio rec
 * Confirming whether you're singing in tune
 * General transcription of a melody
 
-# What I Learned
-* **Manipulating data** outputted by **AI models**
-* Familiarity with **numpy**
-* **File handling**
-* Audio programming
-  * Analysis of wavelengths
-
 # Instructions to run
 Python version == 3.10.14
 
